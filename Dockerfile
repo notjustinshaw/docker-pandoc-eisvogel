@@ -34,4 +34,4 @@ RUN tlmgr install zref
 
 RUN apk update && apk add texlive
 
-COPY eisvogel.latex eisvogel.latex
+COPY eisvogel.latex templates/eisvogel.latex
