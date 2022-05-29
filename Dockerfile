@@ -4,14 +4,4 @@ FROM pandoc/latex:2.16.2
 
 RUN tlmgr option repository http://mirror.ctan.org/systems/texlive/tlnet \
     tlmgr update \
-    && tlmgr install csquotes mdframed needspace sourcesanspro ly1 mweights \
-    sourcecodepro titling pagecolor epstopdf zref footnotebackref \
-    && apk add --update ghostscript
-
-# Install Node and mermaid-filter
-
-ENV CHROME_BIN="/usr/bin/chromium-browser" \
-    PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
-
-RUN apk add --update udev ttf-freefont chromium npm \
-    && npm install -g mermaid-filter@1.4.5 --unsafe-perm=true
+    && tlmgr install adjustbox babel-german background bidi collectbox csquotes everypage filehook footmisc footnotebackref framed fvextra letltxmacro ly1 mdframed mweights needspace pagecolor sourcecodepro sourcesanspro titling ucharcat ulem unicode-math upquote xecjk xurl zref
